@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "243515787513",
+    "firebase_url": "https://useful-maxim-382603-default-rtdb.firebaseio.com",
+    "project_id": "useful-maxim-382603",
+    "storage_bucket": "useful-maxim-382603.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:243515787513:android:0fa7d3f3cb9990be9eba28",
+        "android_client_info": {
+          "package_name": "com.example.travelista"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "243515787513-ceisoqfc0ediabdkdagrsksa13qpu5np.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDz1OHUCGXy1NgJgj-Qm5HY_Qq_p9bf0M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "243515787513-ceisoqfc0ediabdkdagrsksa13qpu5np.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:243515787513:android:5ebeac26de26d95c9eba28",
+        "android_client_info": {
+          "package_name": "com.example.travelistainitial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "243515787513-ceisoqfc0ediabdkdagrsksa13qpu5np.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDz1OHUCGXy1NgJgj-Qm5HY_Qq_p9bf0M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "243515787513-ceisoqfc0ediabdkdagrsksa13qpu5np.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
