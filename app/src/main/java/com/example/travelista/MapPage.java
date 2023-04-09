@@ -9,10 +9,12 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.google.android.gms.maps.GoogleMap;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -21,7 +23,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class MapPage extends AppCompatActivity {
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.OnMapReadyCallback;
+
+public class MapPage extends AppCompatActivity implements OnMapReadyCallback{
 
     DrawerLayout drawerLayout;
     ImageView menu;
@@ -107,18 +112,50 @@ public class MapPage extends AppCompatActivity {
 
 
 
+
+
+
+
+
+
+
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.Map);
+        mapFragment.getMapAsync(this);
+
+
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // OPEN NAVIGATION DRAWER
     public static void openDrawer(DrawerLayout drawerLayout) {
         drawerLayout.openDrawer(GravityCompat.START);
     }
 
+    // CLOSE NAVIGATION DRAWER
     public static void closeDrawer(DrawerLayout drawerLayout) {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.openDrawer(GravityCompat.START);
         }
     }
 
+    // REDIRECT ON NAVIGATION DRAWER CLICK
     public static void redirectActivity(Activity activity, Class secondActivity) {
         Intent intent = new Intent(activity, secondActivity);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -131,8 +168,10 @@ public class MapPage extends AppCompatActivity {
         super.onPause();
 
         closeDrawer(drawerLayout);
+    }
 
-
+    @Override
+    public void onMapReady(@NonNull GoogleMap googleMap) {
 
     }
 }
