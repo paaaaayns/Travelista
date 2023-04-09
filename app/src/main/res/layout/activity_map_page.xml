@@ -22,17 +22,17 @@
             android:layout_height="wrap_content"
             android:text="MAP" />
 
-    <androidx.fragment.app.FragmentContainerView
-        android:name="com.google.android.gms.maps.SupportMapFragment"
-        android:id="@+id/Map"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </androidx.fragment.app.FragmentContainerView>
-
-
+        <androidx.fragment.app.FragmentContainerView
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:id="@+id/Map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </androidx.fragment.app.FragmentContainerView>
 
 
     </LinearLayout>
+
+
 
     <RelativeLayout
         android:layout_width="300dp"
