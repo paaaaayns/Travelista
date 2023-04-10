@@ -1,55 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".DirectionsPage">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:background="#FF7D0D"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
-
-        <ImageButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="10dp"
-            android:background="@null"
-            android:src="@drawable/left_icon_arrow" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginBottom="5dp"
-            android:fontFamily="@font/quicksand"
-            android:text="Directions"
-            android:textColor="@color/white"
-            android:textSize="40dp"
-            android:textStyle="bold" />
-
-    </LinearLayout>
+    <include layout="@layout/toolbar_back" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="210dp"
-        android:orientation="vertical"
-        android:elevation="25dp"
+        android:layout_height="wrap_content"
         android:background="@color/white"
-        android:padding="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        android:elevation="25dp"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            app:startIconDrawable="@drawable/ic_pin"
+            app:startIconTint="@color/primary_orange"
+            android:hint="Origin"
+            app:endIconMode="clear_text"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"  />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:startIconDrawable="@drawable/ic_pin"
+            app:startIconTint="@color/primary_orange"
+            android:hint="Destination"
+            app:endIconMode="clear_text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <EditText
             android:id="@+id/edtOrigin"
@@ -57,31 +58,32 @@
             android:layout_height="40dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/origin_edit_text_style"
+            android:drawableLeft="@drawable/ic_pin"
+
+            android:drawableRight="@drawable/origin_clear"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/quicksand"
+            android:hint="Origin"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:drawableLeft="@drawable/origin_pin"
-            android:drawablePadding="8dp"
-            android:drawableRight="@drawable/origin_clear"
-            android:hint="Origin"
-            android:fontFamily="@font/quicksand"
             android:textColor="@color/black"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/edtDestination"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="@drawable/destination_edit_text_style"
+            android:drawableLeft="@drawable/destination_flag"
+            android:drawableRight="@drawable/destination_clear"
+            android:drawablePadding="8dp"
+            android:elevation="25dp"
+            android:fontFamily="@font/quicksand"
+            android:hint="Destination"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:drawableLeft="@drawable/destination_flag"
-            android:drawablePadding="8dp"
-            android:drawableRight="@drawable/destination_clear"
-            android:hint="Destination"
-            android:fontFamily="@font/quicksand"
             android:textColor="@color/black"
-            android:textStyle="bold"
-            android:elevation="25dp" />
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -92,25 +94,25 @@
                 android:layout_width="200dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="20dp"
-                android:text="Transportation Modes"
+                android:background="@drawable/button_rounded_corners"
                 android:fontFamily="@font/quicksand"
+                android:text="Transportation Modes"
                 android:textColor="@color/black"
-                android:textStyle="bold"
-                android:background="@drawable/button_rounded_corners"/>
+                android:textStyle="bold" />
 
             <Button
                 android:layout_width="150dp"
                 android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
-                android:text="Departure Time"
-                android:fontFamily="@font/quicksand"
-                android:textColor="@color/black"
-                android:textStyle="bold"
                 android:background="@drawable/button_rounded_corners"
-                android:layout_marginLeft="10dp"/>
+                android:fontFamily="@font/quicksand"
+                android:text="Departure Time"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
 
         </LinearLayout>
     </LinearLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
