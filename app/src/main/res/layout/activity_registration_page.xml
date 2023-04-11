@@ -5,9 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:padding="20dp"
     android:orientation="vertical"
     tools:context=".RegistrationPage">
+
+    <include
+        layout="@layout/toolbar_back" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -21,7 +23,7 @@
                 android:id="@+id/imageView3"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="30dp"
 
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -48,25 +50,24 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="30dp"
 
-                app:startIconDrawable="@drawable/ic_person"
                 android:hint="Full Name"
                 app:endIconMode="clear_text"
                 app:helperText="Required!"
                 app:helperTextTextColor="#FF0000"
                 app:layout_constraintEnd_toEndOf="parent"
-
                 app:layout_constraintStart_toStartOf="parent"
+
                 app:layout_constraintTop_toBottomOf="@+id/textView"
-                >
+                app:startIconDrawable="@drawable/ic_person">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edtRegName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
 
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -77,22 +78,22 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
 
-                app:startIconDrawable="@drawable/ic_email"
                 android:hint="Email"
                 app:endIconMode="clear_text"
                 app:helperText="Required!"
                 app:helperTextTextColor="#FF0000"
                 app:layout_constraintEnd_toEndOf="parent"
-
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/layoutRegName">
+
+                app:layout_constraintTop_toBottomOf="@+id/layoutRegName"
+                app:startIconDrawable="@drawable/ic_email">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edtRegEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
 
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -103,26 +104,26 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
 
-                app:startIconDrawable="@drawable/ic_phone"
                 android:hint="Contact Number"
                 app:endIconMode="clear_text"
                 app:helperText="Required!"
                 app:helperTextTextColor="#FF0000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutRegEmail"
+
                 app:prefixText="+63"
                 app:prefixTextColor="@color/primary_orange"
-
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/layoutRegEmail">
+                app:startIconDrawable="@drawable/ic_phone">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edtRegContactNumber"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
 
-                    android:textColor="@color/black"
                     android:inputType="number"
-                    android:maxLength="10" />
+                    android:maxLength="10"
+                    android:textColor="@color/black" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -133,23 +134,23 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
 
-                app:startIconDrawable="@drawable/ic_key"
                 android:hint="Password"
                 app:endIconMode="password_toggle"
                 app:helperText="Required!"
                 app:helperTextTextColor="#FF0000"
-
                 app:layout_constraintEnd_toEndOf="parent"
+
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/layoutRegContactNumber">
+                app:layout_constraintTop_toBottomOf="@+id/layoutRegContactNumber"
+                app:startIconDrawable="@drawable/ic_key">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edtRegPassword1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
 
-                    android:textColor="@color/black"
-                    android:inputType="textPassword" />
+                    android:inputType="textPassword"
+                    android:textColor="@color/black" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -159,23 +160,23 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
 
-                app:startIconDrawable="@drawable/ic_key"
                 android:hint="Confirm Password"
                 app:endIconMode="password_toggle"
                 app:helperText="Required!"
                 app:helperTextTextColor="#FF0000"
-
                 app:layout_constraintEnd_toEndOf="parent"
+
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/layoutRegPassword1" >
+                app:layout_constraintTop_toBottomOf="@+id/layoutRegPassword1"
+                app:startIconDrawable="@drawable/ic_key">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edtRegPassword2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
 
-                    android:textColor="@color/black"
-                    android:inputType="textPassword" />
+                    android:inputType="textPassword"
+                    android:textColor="@color/black" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
@@ -187,8 +188,8 @@
 
                 android:fontFamily="@font/quicksand"
                 android:text="Create Account"
-                android:textStyle="bold"
                 android:textAllCaps="false"
+                android:textStyle="bold"
 
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

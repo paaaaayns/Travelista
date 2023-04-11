@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
+    android:orientation="vertical"
     tools:context=".LoginPage">
+
+    <include
+        layout="@layout/toolbar_back" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -47,20 +52,20 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
 
-                app:startIconDrawable="@drawable/ic_email"
                 android:hint="Email"
                 app:endIconMode="clear_text"
                 app:layout_constraintEnd_toEndOf="parent"
-
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView" >
+
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:startIconDrawable="@drawable/ic_email">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edtEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
 
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -71,13 +76,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
 
-                app:startIconDrawable="@drawable/ic_key"
                 android:hint="Password"
                 app:endIconMode="password_toggle"
-
                 app:layout_constraintEnd_toEndOf="parent"
+
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/layoutEmail">
+                app:layout_constraintTop_toBottomOf="@+id/layoutEmail"
+                app:startIconDrawable="@drawable/ic_key">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edtPassword"
@@ -108,4 +113,4 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

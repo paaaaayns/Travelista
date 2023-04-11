@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" >
-
+    xmlns:tools="http://schemas.android.com/tools">
     <!-- Requires Internet Connection -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -16,8 +15,31 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.Travelista"
-        tools:targetApi="31" >
-
+        tools:targetApi="31">
+        <activity
+            android:name=".TripDetails"
+            android:exported="false" />
+        <activity
+            android:name=".ItineraryPlannerPage"
+            android:exported="false" />
+        <activity
+            android:name=".AddPlanLodging"
+            android:exported="false" />
+        <activity
+            android:name=".AddPlanRestaurant"
+            android:exported="false" />
+        <activity
+            android:name=".AddPlanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddPlanDirections"
+            android:exported="false" />
+        <activity
+            android:name=".AddPlan"
+            android:exported="false" />
+        <activity
+            android:name=".AddTrip"
+            android:exported="false" />
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
 
@@ -36,7 +58,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.Travelista" >
+            android:theme="@style/Theme.Travelista">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

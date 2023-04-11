@@ -9,10 +9,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class DirectionsPage extends AppCompatActivity {
 
     ImageView btnBack;
+    TextView pageName;
 
     EditText edtOrigin;
 
@@ -21,26 +23,18 @@ public class DirectionsPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_directions_page);
 
+        pageName = findViewById(R.id.pageName);
+
+        pageName.setText("Directions");
+
+
         edtOrigin = findViewById(R.id.edtOrigin);
 
-        edtOrigin.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                final int DRAWABLE_RIGHT = 2;
-
-                if (event.getAction() == MotionEvent.ACTION_UP) {
-                    if (event.getRawX() >= (edtOrigin.getRight() - edtOrigin.getCompoundDrawables()[DRAWABLE_RIGHT].getBounds().width())) {
-                        edtOrigin.setText("");
-                        return true;
-                    }
-                }
-
-                return false;
-            }
-        });
 
 
-                btnBack = findViewById(R.id.btnBack);
+
+
+        btnBack = findViewById(R.id.btnBack);
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

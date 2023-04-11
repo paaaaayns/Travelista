@@ -125,7 +125,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/layoutItinerary"
+        android:id="@+id/layoutItineraryPlanner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -135,14 +135,14 @@
 
 
         <TextView
-            android:id="@+id/tvItinerary"
+            android:id="@+id/tvItineraryPlanner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
             android:drawablePadding="20dp"
             android:fontFamily="@font/quicksand"
             android:gravity="center_vertical"
-            android:text="Itinerary"
+            android:text="Itinerary Planner"
             android:textColor="@color/black"
             android:textSize="14sp"
             android:textStyle="bold"

@@ -40,7 +40,7 @@ public class MapPage extends AppCompatActivity implements OnMapReadyCallback {
 
     DrawerLayout drawerLayout;
     ImageView btnMenu;
-    LinearLayout layoutHome, layoutDirections, layoutGoToPlaces, layoutItinerary, layoutAbout, layoutSignOut;
+    LinearLayout layoutHome, layoutDirections, layoutGoToPlaces, layoutItineraryPlanner, layoutAbout, layoutSignOut;
 
     TextView lblName, lblEmail;
 
@@ -58,7 +58,7 @@ public class MapPage extends AppCompatActivity implements OnMapReadyCallback {
         layoutHome = findViewById(R.id.layoutHome);
         layoutDirections = findViewById(R.id.layoutDirections);
         layoutGoToPlaces = findViewById(R.id.layoutGoToPlaces);
-        layoutItinerary = findViewById(R.id.layoutItinerary);
+        layoutItineraryPlanner = findViewById(R.id.layoutItineraryPlanner);
         layoutAbout = findViewById(R.id.layoutAbout);
         layoutSignOut = findViewById(R.id.layoutSignOut);
         lblName = findViewById(R.id.lblName);
@@ -106,6 +106,14 @@ public class MapPage extends AppCompatActivity implements OnMapReadyCallback {
             @Override
             public void onClick(View v) {
                 redirectActivity(MapPage.this, DirectionsPage.class);
+            }
+        });
+
+        // Redirect Page - Directions Page
+        layoutItineraryPlanner.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                redirectActivity(MapPage.this, ItineraryPlannerPage.class);
             }
         });
 
