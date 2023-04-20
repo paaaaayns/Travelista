@@ -51,11 +51,11 @@
 
     <LinearLayout
         android:id="@+id/layoutHome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingStart="20dp"
 
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:orientation="horizontal">
 
 
@@ -63,6 +63,7 @@
             android:id="@+id/tvHome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
 
             android:drawablePadding="20dp"
             android:fontFamily="@font/quicksand"
@@ -76,11 +77,10 @@
 
     <LinearLayout
         android:id="@+id/layoutDirections"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingStart="20dp"
 
-        android:layout_marginTop="20dp"
         android:orientation="horizontal">
 
 
@@ -88,6 +88,7 @@
             android:id="@+id/tvDirections"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
 
             android:drawablePadding="20dp"
             android:fontFamily="@font/quicksand"
@@ -101,18 +102,17 @@
 
     <LinearLayout
         android:id="@+id/layoutGoToPlaces"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingStart="20dp"
 
-        android:layout_marginTop="20dp"
         android:orientation="horizontal">
-
 
         <TextView
             android:id="@+id/tvGoToPlaces"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
 
             android:drawablePadding="20dp"
             android:fontFamily="@font/quicksand"
@@ -126,11 +126,10 @@
 
     <LinearLayout
         android:id="@+id/layoutItineraryPlanner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingStart="20dp"
 
-        android:layout_marginTop="20dp"
         android:orientation="horizontal">
 
 
@@ -138,6 +137,7 @@
             android:id="@+id/tvItineraryPlanner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
 
             android:drawablePadding="20dp"
             android:fontFamily="@font/quicksand"
@@ -152,22 +152,23 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:background="@color/primary_orange" />
 
     <LinearLayout
         android:id="@+id/layoutAbout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingStart="20dp"
 
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/tvAbout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
 
             android:drawablePadding="20dp"
             android:fontFamily="@font/quicksand"
@@ -181,17 +182,17 @@
 
     <LinearLayout
         android:id="@+id/layoutSignOut"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingStart="20dp"
 
-        android:layout_marginTop="20dp"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/tvSignOut"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
 
             android:drawablePadding="20dp"
             android:fontFamily="@font/quicksand"

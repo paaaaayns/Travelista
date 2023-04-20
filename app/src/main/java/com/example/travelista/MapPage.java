@@ -4,6 +4,8 @@ import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
 import android.location.Location;
 import android.os.Bundle;
 import android.view.View;
@@ -25,6 +27,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -35,6 +38,10 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import java.io.IOException;
+import java.util.List;
+import java.util.Locale;
 
 public class MapPage extends AppCompatActivity implements OnMapReadyCallback {
 
@@ -135,6 +142,10 @@ public class MapPage extends AppCompatActivity implements OnMapReadyCallback {
 
 
 
+
+
+
+
     }
 
     final int FINE_PERMISSION_CODE = 1;
@@ -193,8 +204,49 @@ public class MapPage extends AppCompatActivity implements OnMapReadyCallback {
         gMaps = googleMap;
 
         LatLng myLocation = new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude());
-        gMaps.addMarker(new MarkerOptions().position(myLocation).title("You are here!"));
+        gMaps.addMarker(new MarkerOptions().position(myLocation).title("You are here!").draggable(true));
         gMaps.moveCamera(CameraUpdateFactory.newLatLngZoom(myLocation, 15f));
+
+        gMaps.getUiSettings().setCompassEnabled(true);
+        gMaps.getUiSettings().setMyLocationButtonEnabled(true);
+        gMaps.getUiSettings().setZoomControlsEnabled(true);
+
+        gMaps.setOnMarkerDragListener(new GoogleMap.OnMarkerDragListener() {
+
+            Geocoder geocoder = new Geocoder(MapPage.this, Locale.getDefault());
+
+            String newAdd;
+
+            @Override
+            public void onMarkerDrag(@NonNull Marker marker) {
+
+
+            }
+
+            @Override
+            public void onMarkerDragEnd(@NonNull Marker marker) {
+
+                LatLng newLoc = new LatLng(marker.getPosition().latitude, marker.getPosition().longitude);
+
+                try {
+                    List<Address> listAddress = geocoder.getFromLocation(newLoc.latitude, newLoc.latitude, 1);
+                    if (listAddress.size() > 0) {
+                        newAdd = listAddress.get(0).getAdminArea();
+                    }
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+
+                Toast.makeText(MapPage.this, "Current Location is now " + newAdd, Toast.LENGTH_SHORT).show();
+                marker.setTitle(marker.getPosition().toString());
+
+            }
+
+            @Override
+            public void onMarkerDragStart(@NonNull Marker marker) {
+
+            }
+        });
     }
 
 
